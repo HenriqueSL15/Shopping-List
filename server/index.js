@@ -8,7 +8,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://myAtlasDBUser:135790@myatlasclusteredu.ufhaxua.mongodb.net/shopping?retryWrites=true&w=majority&appName=myAtlasClusterEDU")
+mongoose.connect("mongodb+srv://myAtlasDBUser:135790@myatlasclusteredu.ufhaxua.mongodb.net/?retryWrites=true&w=majority&appName=myAtlasClusterEDU")
 
 app.get('/', (req, res) => {
   UserModel.find({})
