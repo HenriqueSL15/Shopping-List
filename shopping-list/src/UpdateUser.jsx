@@ -10,7 +10,7 @@ function UpdateUser() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getUser/'+id)
+    axios.get('https://shopping-list-api-umber.vercel.app/getUser/'+id)
     .then(result => {console.log(result)
       setItem(result.data.item);
       setQuantity(result.data.quantity);
@@ -21,7 +21,7 @@ function UpdateUser() {
 
   const Update = (e) => {
     e.preventDefault();
-    axios.put("http://localhost:3001/updateUser/"+id,{item, quantity, day})
+    axios.put("https://shopping-list-api-umber.vercel.app/updateUser/"+id,{item, quantity, day})
     .then(result => {
       console.log(result)
       navigate('/')
