@@ -10,7 +10,7 @@ function CreateUser() {
 
   const Submit = (e) => {
     e.preventDefault();
-    axios.post("https://shopping-list-api-umber.vercel.app/createUser",{item, quantity, day})
+    axios.post("http://localhost:3001/createUser",{item, quantity, day})
     .then(result => {
       console.log(result)
       navigate('/')

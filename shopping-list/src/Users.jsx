@@ -6,13 +6,13 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://shopping-list-api-umber.vercel.app')
+    axios.get('http://localhost:3001')
     .then(result => setUsers(result.data))
     .catch(err => console.log(err));
   }, [])
 
   const handleDelete = (id) => {
-    axios.delete('https://shopping-list-api-umber.vercel.app/deleteUser/'+id)
+    axios.delete('http://localhost:3001/deleteUser/'+id)
     .then(res => {console.log(res)
       window.location.reload();
     })
