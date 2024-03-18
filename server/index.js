@@ -13,10 +13,9 @@ app.use(express.json());
 mongoose.connect("mongodb+srv://myAtlasDBUser:135790@myatlasclusteredu.ufhaxua.mongodb.net/shopping?retryWrites=true&w=majority&appName=myAtlasClusterEDU")
 
 app.get('/', (req, res) => {
-  res.json("Hello!")
-  // UserModel.find({})
-  // .then(users => res.json(users))
-  // .catch(err => res.json(err));
+  UserModel.find({})
+  .then(users => res.json(users))
+  .catch(err => res.json(err));
 })
 
 app.get('/getUser/:id', (req, res) => {
