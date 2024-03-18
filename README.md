@@ -40,4 +40,4 @@ And then:
 
 This will run the server side.
 
-**Now everything is working right :D, just open the blue link that showed up on the first terminal and you can use the website
+**Now everything is working right :D, just open the blue link that showed up on the first terminal and you can use the website**
